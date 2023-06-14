@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var AnimationButton: SpringButton!
     @IBOutlet weak var InfoLabel: UILabel!
     
+    var currentAnimation = AnimationModel.randomAnimation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         AnimatedView.layer.cornerRadius = 10
@@ -21,7 +23,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func AnimationButtonTapped(_ sender: SpringButton) {
-        let currentAnimation = AnimationModel.randomAnimation()
         AnimatedView.animation = currentAnimation.preset
         AnimatedView.curve = currentAnimation.curve
         AnimatedView.force = CGFloat(currentAnimation.force)
@@ -29,7 +30,6 @@ class ViewController: UIViewController {
         AnimatedView.delay = CGFloat(currentAnimation.delay)
         AnimatedView.animate()
         
-        sender.setTitle(currentAnimation.preset, for: .normal)
         InfoLabel.text = """
     Preset: \(currentAnimation.preset)
     Curve: \(currentAnimation.curve)
@@ -37,6 +37,10 @@ class ViewController: UIViewController {
     Duration: \(String(format: "%.1f", currentAnimation.duration))
     Delay: \(String(format: "%.1f", currentAnimation.delay))
     """
+        
+        currentAnimation = AnimationModel.randomAnimation()
+        
+        sender.setTitle(currentAnimation.preset, for: .normal)
     }
 }
 
