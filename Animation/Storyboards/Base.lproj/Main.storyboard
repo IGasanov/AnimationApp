@@ -24,7 +24,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2V-jU-y9P">
-                                <rect key="frame" x="118" y="385" width="194" height="119.66666666666669"/>
+                                <rect key="frame" x="176.33333333333334" y="406.33333333333331" width="77.666666666666657" height="119.66666666666669"/>
                                 <string key="text">preset:
 curve:
 force:
@@ -50,21 +50,20 @@ delay:</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Y3C-mF-X8T" firstAttribute="width" secondItem="Muc-LC-awm" secondAttribute="width" id="0bI-Ds-BV9"/>
+                            <constraint firstItem="N2V-jU-y9P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Il-af-j2E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Muc-LC-awm" secondAttribute="trailing" constant="46" id="BfL-3R-o02"/>
-                            <constraint firstItem="N2V-jU-y9P" firstAttribute="top" secondItem="Muc-LC-awm" secondAttribute="bottom" constant="96.329999999999998" id="FFI-tu-Y0N"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Y3C-mF-X8T" secondAttribute="trailing" constant="46" id="L85-fV-38K"/>
                             <constraint firstItem="Y3C-mF-X8T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="RCB-JT-gAV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y3C-mF-X8T" secondAttribute="bottom" multiplier="1.2" id="dMZ-LZ-hUl"/>
-                            <constraint firstItem="N2V-jU-y9P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="118" id="kiX-Hv-wpz"/>
                             <constraint firstItem="Muc-LC-awm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="mTl-qM-3jx"/>
+                            <constraint firstItem="N2V-jU-y9P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="thz-8d-eIu"/>
                             <constraint firstItem="Muc-LC-awm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="uis-aA-ZrD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N2V-jU-y9P" secondAttribute="trailing" constant="118" id="v6U-E4-Y56"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="AnimatedView" destination="Muc-LC-awm" id="FpJ-Rv-kP1"/>
-                        <outlet property="AnimationButton" destination="Y3C-mF-X8T" id="TWp-lZ-OCJ"/>
-                        <outlet property="InfoLabel" destination="N2V-jU-y9P" id="1I8-6f-9FD"/>
+                        <outlet property="animatedView" destination="Muc-LC-awm" id="FpJ-Rv-kP1"/>
+                        <outlet property="animationButton" destination="Y3C-mF-X8T" id="TWp-lZ-OCJ"/>
+                        <outlet property="infoLabel" destination="N2V-jU-y9P" id="1I8-6f-9FD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

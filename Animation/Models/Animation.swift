@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SpringAnimation
 
 struct Animation {
     let preset: String
@@ -13,12 +14,12 @@ struct Animation {
     let force: Float
     let duration: Float
     let delay: Float
-}
 
-class AnimationModel {
     static func randomAnimation() -> Animation {
-        let randomPreset = DataStore.shared.presets.randomElement() ?? ""
-        let randomCurve = DataStore.shared.curves.randomElement() ?? ""
+        let presets = AnimationPreset.allCases.map { $0.rawValue }
+        let curves = AnimationCurve.allCases.map { $0.rawValue }
+        let randomPreset = presets[Int.random(in: 0..<presets.count)]
+        let randomCurve = curves[Int.random(in: 0..<curves.count)]
         let randomForce = Float.random(in: 0.5...2.5)
         let randomDuration = Float.random(in: 0.5...2.5)
         let randomDelay = Float.random(in: 0.5...2.5)
